@@ -25,6 +25,11 @@ module.exports = {
   },
   module: {
     rules: [
+      { test: /\.pug$/, 
+        loader: "pug-loader",
+        include: [resolve('src')]
+       },
+            // => "jade" loader is used for ".jade" files
       {
         test: /\.js$/,
         loader: 'babel-loader',
